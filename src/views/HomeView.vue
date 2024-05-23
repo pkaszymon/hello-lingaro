@@ -9,12 +9,17 @@ export default {
     };
   },
   async mounted() {
-    const resp = await fetch("/api/message");
-    console.log(resp);
-    const { text } = await resp.json();
-    this.message = text; 
+    try {
+      const resp = await fetch("/api/message");
+      console.log(resp);
+      const { text } = await resp.json();
+      this.message = text;
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
+
 </script>
 
 <template>
