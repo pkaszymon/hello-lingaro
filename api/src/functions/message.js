@@ -8,6 +8,6 @@ app.http('message', {
 
         // const name = request.query.get('name') || await request.text() || 'world';
 
-        return { body: "Hello from api!" }
+        return { "body": JSON.stringify({ message: 'Hello from api!' })};
     }
 });

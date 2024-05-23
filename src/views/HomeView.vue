@@ -1,18 +1,22 @@
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue"
 
 
 export default {
+  components: {
+    HelloWorld
+  },
   data() {
     return {
-      message: ""
+      message: "default message"
     };
   },
   async mounted() {
     const resp = await fetch("/api/message");
     console.log(resp);
-    const { text } = await resp.json();
-    this.message = text; 
+    const parsed = await resp.json();
+    console.log(parsed); 
+    this.message = parsed.message;
   }
 }
 </script>
@@ -21,5 +25,15 @@ export default {
   <main>
     <HelloWorld title="Hello Lingaro!" msg="I deployed this Vue.js app using Azure Static Web App resource." />
   </main>
-  {{  message }}
+  <div class="message">
+    {{  message }}
+  </div>
 </template>
+
+<style>
+.message {
+  text-align: center;
+  /* width: 100%; */
+  margin: 3rem;
+}
+</style>

@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as t,a as s}from"./index-CBMfw_5A.js";const c={},a={class:"about"},i=s("img",{src:"https://media.giphy.com/media/I1nwVpCaB4k36/giphy.gif",alt:"GIF"},null,-1),n=[i];function _(r,l){return t(),o("div",a,[...n])}const m=e(c,[["render",_],["__file","/home/simon/projekty/hello-lingaro/src/views/AboutView.vue"]]);export{m as default};
