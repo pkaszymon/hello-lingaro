@@ -7,16 +7,6 @@ export default {
     return {
       message: ""
     };
-  },
-  async mounted() {
-    try {
-      const resp = await fetch("/api/message");
-      console.log(resp);
-      const { text } = await resp.json();
-      this.message = text;
-    } catch (error) {
-      console.error(error);
-    }
   }
 }
 
