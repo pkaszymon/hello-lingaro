@@ -1,15 +1,18 @@
 <template>
   <div class="about">
-    <img src="https://media.giphy.com/media/I1nwVpCaB4k36/giphy.gif" alt="GIF">
+    <img class="kitku" src="https://media.giphy.com/media/I1nwVpCaB4k36/giphy.gif" alt="GIF" height="500" width="500">
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
   }
+} */
+
+.kitku{
+  display: flex;
+  align-items: center;
+  margin: 10rem auto;
 }
 </style>

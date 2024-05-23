@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img alt="Vue logo" class="logo" src="https://lingarogroup.com/hubfs/Lingaro_June_2022/Images/logo_lingaro.svg" width="250" height="150" />
     </div>
     <nav>
-      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/">A page that says hello</RouterLink>
       <RouterLink to="/about">Another reason to hire me</RouterLink>
     </nav>
   </header>
@@ -21,28 +21,34 @@ import HelloWorld from './components/HelloWorld.vue'
 <style scoped>
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  /* max-height: 100vh; */
+  box-shadow: 1px 4px 5px rgba(156, 156, 156, 0.2); /* Add this line */
+  width:100%;
+  
+  padding-bottom:3rem;
+  margin-bottom: 3rem;
+  
 }
 
 .wrapper {
   display: flex;
   direction: ltr;
-  gap: 10rem;
-  margin-top: 10rem;
+  /* gap: 10rem; */
+  /* margin-top: 2rem; */
   place-content: center;
 
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 2rem auto 0;
 }
 
 nav {
   width: 100%;
   font-size: 25px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 nav a.router-link-exact-active {
